@@ -29,9 +29,9 @@ func headers(next http.HandlerFunc) http.HandlerFunc {
 }
 
 func (t *router) getUpload(w http.ResponseWriter, r *http.Request) {
-
+	t.service.Upload()
 }
 
 func (t *router) getStream(w http.ResponseWriter, r *http.Request) {
-
+	t.service.Stream()
 }
