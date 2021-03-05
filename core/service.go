@@ -1,6 +1,6 @@
 package core
 
 type Service interface {
-	Upload()
+	Upload(fileName string) error
 	Stream()
 }
