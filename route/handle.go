@@ -105,7 +105,7 @@ func (t *router) postUpload(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if err = t.service.Upload(fileName); err != nil {
+	if err = t.service.Upload(fileName+fileEndings[0]); err != nil {
 		t.log.Println("The destination file write failed.")
 		jsonResponse(w, http.StatusInternalServerError, "The destination file write failed.")
 		return
